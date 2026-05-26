@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>IFAMDS Report</title>
+<style>
+body{font-family:'Segoe UI',sans-serif;background:#111;color:#eee;margin:0;padding:20px}
+h1{color:#00ffcc;border-bottom:2px solid #00ffcc;padding-bottom:8px}
+h2{color:#ffcc00;margin-top:24px}
+h3{color:#88ccff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px}
+.card{background:#1e1e1e;border:1px solid #333;border-radius:10px;padding:16px}
+.fire{border-color:#ff4444}.warn{border-color:#ffaa00}.ok{border-color:#44ff88}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+th{background:#222;color:#00ffcc;padding:8px;border:1px solid #333;text-align:left}
+td{padding:7px 8px;border:1px solid #2a2a2a}
+tr:nth-child(even){background:#1a1a1a}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:bold}
+.b-fire{background:#661111;color:#ff8888}
+.b-warn{background:#664400;color:#ffaa44}
+.b-ok  {background:#115511;color:#88ff88}
+.bar-bg{background:#333;border-radius:4px;height:10px;margin:4px 0}
+.bar-fill{height:10px;border-radius:4px}
+svg text{font-size:11px}
+</style>
+</head>
+<body>
+<h1>&#127795; IFAMDS — Intelligent Forest Advisory System</h1>
+<h2>Zone Status Overview</h2>
+<div class='grid'>
+<div class='card fire'>
+<h3>Live Sensor Readings</h3>
+<table><tr><th>Zone</th><th>Temp C</th><th>Smoke</th><th>Status</th></tr>
+<tr><td>Zone 3</td><td>62</td><td>85</td><td><span class='badge b-fire'>FIRE</span></td></tr>
+<tr><td>Zone 4</td><td>45</td><td>55</td><td><span class='badge b-warn'>WARN</span></td></tr>
+<tr><td>Zone 2</td><td>71</td><td>91</td><td><span class='badge b-fire'>FIRE</span></td></tr>
+<tr><td>Zone 5</td><td>30</td><td>20</td><td><span class='badge b-ok'>SAFE</span></td></tr>
+<tr><td>Zone 7</td><td>28</td><td>10</td><td><span class='badge b-ok'>SAFE</span></td></tr>
+</table></div>
+<div class='card'>
+<h3>Module Load</h3>
+<p style='margin:4px 0;font-size:13px'>Arrays <span style='float:right;color:#44ff88'>35%</span></p>
+<div class='bar-bg'><div class='bar-fill' style='width:35%;background:#44ff88'></div></div>
+<p style='margin:4px 0;font-size:13px'>Linked Lists <span style='float:right;color:#ffaa00'>52%</span></p>
+<div class='bar-bg'><div class='bar-fill' style='width:52%;background:#ffaa00'></div></div>
+<p style='margin:4px 0;font-size:13px'>Queues <span style='float:right;color:#ff4444'>71%</span></p>
+<div class='bar-bg'><div class='bar-fill' style='width:71%;background:#ff4444'></div></div>
+<p style='margin:4px 0;font-size:13px'>Trees <span style='float:right;color:#44ff88'>44%</span></p>
+<div class='bar-bg'><div class='bar-fill' style='width:44%;background:#44ff88'></div></div>
+<p style='margin:4px 0;font-size:13px'>Graphs <span style='float:right;color:#ffaa00'>68%</span></p>
+<div class='bar-bg'><div class='bar-fill' style='width:68%;background:#ffaa00'></div></div>
+<p style='margin:4px 0;font-size:13px'>Hash Tables <span style='float:right;color:#44ff88'>29%</span></p>
+<div class='bar-bg'><div class='bar-fill' style='width:29%;background:#44ff88'></div></div>
+</div>
+</div>
+<h2>Hash Table Index</h2>
+<table><tr><th>Index</th><th>Key</th><th>Value</th></tr>
+<tr><td>0</td><td>-</td><td><span class='badge '>EMPTY</span></td></tr>
+<tr><td>1</td><td>101</td><td><span class='badge b-ok'>Zone1_Temp:28</span></td></tr>
+<tr><td>2</td><td>202</td><td><span class='badge b-ok'>Zone2_Smoke:45</span></td></tr>
+<tr><td>3</td><td>108</td><td><span class='badge b-ok'>Zone3_Temp:62</span></td></tr>
+<tr><td>4</td><td>303</td><td><span class='badge b-ok'>Zone3_Humid:18</span></td></tr>
+<tr><td>5</td><td>-</td><td><span class='badge '>EMPTY</span></td></tr>
+<tr><td>6</td><td>404</td><td><span class='badge b-ok'>Zone4_Wind</span></td></tr>
+</table>
+<h2>Zone Graph Topology</h2>
+<svg width='420' height='300' style='background:#1a1a1a;border-radius:8px'>
+<line x1='320' y1='150' x2='243.992' y2='254.616' stroke='#00ffcc' stroke-width='1.5'/>
+<line x1='243.992' y1='254.616' x2='121.008' y2='214.657' stroke='#00ffcc' stroke-width='1.5'/>
+<line x1='121.008' y1='214.657' x2='121.008' y2='85.3439' stroke='#00ffcc' stroke-width='1.5'/>
+<line x1='121.008' y1='85.3439' x2='243.991' y2='45.3836' stroke='#00ffcc' stroke-width='1.5'/>
+<line x1='243.991' y1='45.3836' x2='320' y2='150' stroke='#00ffcc' stroke-width='1.5'/>
+<line x1='320' y1='150' x2='121.008' y2='85.3439' stroke='#00ffcc' stroke-width='1.5'/>
+<circle cx='320' cy='150' r='18' fill='#44aa44' stroke='white' stroke-width='1'/>
+<text x='314' y='154' fill='white'>Z0</text>
+<circle cx='243.992' cy='254.616' r='18' fill='#cc2222' stroke='white' stroke-width='1'/>
+<text x='237.992' y='258.616' fill='white'>Z1</text>
+<circle cx='121.008' cy='214.657' r='18' fill='#aaaa22' stroke='white' stroke-width='1'/>
+<text x='115.008' y='218.657' fill='white'>Z2</text>
+<circle cx='121.008' cy='85.3439' r='18' fill='#44aa44' stroke='white' stroke-width='1'/>
+<text x='115.008' y='89.3439' fill='white'>Z3</text>
+<circle cx='243.991' cy='45.3836' r='18' fill='#2266cc' stroke='white' stroke-width='1'/>
+<text x='237.991' y='49.3836' fill='white'>Z4</text>
+</svg>
+<h2>BST Zone Hierarchy</h2>
+<svg width='420' height='220' style='background:#1a1a1a;border-radius:8px'>
+<line x1='210' y1='30' x2='110' y2='100' stroke='#888' stroke-width='1.5'/>
+<line x1='210' y1='30' x2='310' y2='100' stroke='#888' stroke-width='1.5'/>
+<line x1='110' y1='100' x2='60' y2='170' stroke='#888' stroke-width='1.5'/>
+<line x1='110' y1='100' x2='160' y2='170' stroke='#888' stroke-width='1.5'/>
+<line x1='310' y1='100' x2='360' y2='170' stroke='#888' stroke-width='1.5'/>
+<circle cx='210' cy='30' r='16' fill='#339933' stroke='white' stroke-width='1'/>
+<text x='202' y='34' fill='white'>50</text>
+<circle cx='110' cy='100' r='16' fill='#339933' stroke='white' stroke-width='1'/>
+<text x='102' y='104' fill='white'>30</text>
+<circle cx='310' cy='100' r='16' fill='#cc2222' stroke='white' stroke-width='1'/>
+<text x='302' y='104' fill='white'>70</text>
+<circle cx='60' cy='170' r='16' fill='#339933' stroke='white' stroke-width='1'/>
+<text x='52' y='174' fill='white'>20</text>
+<circle cx='160' cy='170' r='16' fill='#339933' stroke='white' stroke-width='1'/>
+<text x='152' y='174' fill='white'>40</text>
+<circle cx='360' cy='170' r='16' fill='#cc2222' stroke='white' stroke-width='1'/>
+<text x='352' y='174' fill='white'>80</text>
+</svg>
+<h2>Scenario Results</h2>
+<div class='grid'>
+<div class='card fire'><h3>Scenario 1: Cascading Fire</h3><p style='font-size:13px;color:#bbb'>Fire contained in Zone 3 — resources deployed</p></div>
+<div class='card warn'><h3>Scenario 2: Sensor Failure</h3><p style='font-size:13px;color:#bbb'>Zones 2,4 reconstructed via interpolation</p></div>
+<div class='card fire'><h3>Scenario 3: Multi-Anomaly</h3><p style='font-size:13px;color:#bbb'>2 fire zones + 2 activity alerts escalated</p></div>
+<div class='card warn'><h3>Scenario 4: System Overload</h3><p style='font-size:13px;color:#bbb'>18 tasks triaged — system load normalised</p></div>
+<div class='card ok'><h3>Scenario 5: Global Emergency</h3><p style='font-size:13px;color:#bbb'>6 zones synchronised via BFS broadcast</p></div>
+</div>
+</body>
+</html>
